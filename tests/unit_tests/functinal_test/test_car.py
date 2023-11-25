@@ -1,4 +1,5 @@
 import pytest
+import allure
 
 
 @pytest.mark.smoke
@@ -23,6 +24,7 @@ def test_type_miles_limit(get_new_car_params_with_check_type, invalid_miles):
 
 
 @pytest.mark.sanity
+@allure.title('sanity test')
 def test_start_engine_when_already_running(get_new_car):
     new_car = get_new_car
     new_car.start_engine()
@@ -31,6 +33,7 @@ def test_start_engine_when_already_running(get_new_car):
 
 
 @pytest.mark.sanity
+@allure.title('sanity test')
 def test_start_stop_engine(get_new_car):
     new_car = get_new_car
     start_message = new_car.start_engine()
@@ -40,6 +43,7 @@ def test_start_stop_engine(get_new_car):
 
 
 @pytest.mark.sanity
+@allure.title('sanity test')
 def test_stop_engine_when_already_off(get_new_car):
     new_car = get_new_car
     stop_message = new_car.stop_engine()
@@ -47,6 +51,7 @@ def test_stop_engine_when_already_off(get_new_car):
 
 
 @pytest.mark.sanity
+@allure.title('sanity test')
 def test_drive_without_engine_start(get_new_car):
     new_car = get_new_car
     drive_message = new_car.drive(100)
@@ -54,6 +59,7 @@ def test_drive_without_engine_start(get_new_car):
 
 
 @pytest.mark.sanity
+@allure.title('sanity test')
 def test_drive_with_engine_start(get_new_car_params_with_check_type):
     new_car = get_new_car_params_with_check_type("Toyota", "Camry", 1000)
     new_car.start_engine()
@@ -63,6 +69,7 @@ def test_drive_with_engine_start(get_new_car_params_with_check_type):
 
 
 @pytest.mark.sanity
+@allure.title('sanity test')
 def test_drive_exceeding_miles_limit(get_new_car):
     new_car = get_new_car
     new_car.start_engine()

@@ -1,5 +1,5 @@
 import pytest
-from unit.car import Car
+from tests.unit_tests.car import Car
 
 
 def pytest_configure(config):

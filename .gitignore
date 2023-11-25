@@ -161,4 +161,6 @@ cython_debug/
 
 
 /homework_pytest_12/jenkins/
-/ui_tests/allure-results/
+/tests/ui_tests/allure-results/
+/tests/api_tests/allure-results/
+/tests/db_tests/allure-results/
