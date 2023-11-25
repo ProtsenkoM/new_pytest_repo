@@ -159,4 +159,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-homework_pytest_12/jenkins/data/
+
+/homework_pytest_12/jenkins/
