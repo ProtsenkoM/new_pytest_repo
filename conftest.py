@@ -6,6 +6,18 @@ from constants import ROOT_PATH
 from page_objects.login_page import LoginPage
 from utilities.driver_factory import DriverFactory
 from utilities.json_to_dict import DictToClass
+import allure
+
+
+@pytest.hookimpl(tryfirst=True, hookwrapper=True)
+def pytest_runtest_makereport(item):
+    # execute all other hooks to obtain the report object
+    outcome = yield
+    rep = outcome.get_result()
+    # set a report attribute for each phase of a call, which can
+    # be "setup", "call", "teardown"
+    setattr(item, "rep_" + rep.when, rep)
+
 
 
 def pytest_addoption(parser):
@@ -39,6 +51,11 @@ def create_driver(env, request):
     driver.maximize_window()
     driver.get(env.url)
     yield driver
+    item = request.node
+    if item.rep_call.failed:
+        allure.attach(driver.get_screenshot_as_png(),
+                      name='Fail_screenshot',
+                      attachment_type=allure.attachment_type.PNG)
     driver.quit()
 
 
