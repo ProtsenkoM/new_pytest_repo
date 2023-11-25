@@ -1,0 +1,90 @@
+Caйт - https://ithillel.ua/
+
+XPath локатори:
+******************************************
+1. Кнопка зателфонувати
+Xpath: //span[@class="header-bar-link_text"]
+2. Кнопка особистий документ
+Xpath://a[@class="header-bar-link -icon"]
+3. Кнопка школа
+Xpath: //button[@class="site-nav-link"]
+4. Кнопка Курси
+Xpath: //button[@class="site-nav-link"][@data-dropdown-trigger="coursesMenu"]
+5. Кнопка Бізнесу
+Xpath: //li[@class="site-nav-menu_item -corped"]/a
+6. Кнопка Консультація
+Xpath: //li[contains(@class, 'site-nav-menu_item -consultation')]/button
+7. Кнопка Безкоштовна консультація
+Xpath: //button[contains(@id, 'btn-consultation-hero')]
+8.  Іконка Кубок
+Xpath:  //div[@class="icon-box advantage_icon"]/img[@alt="trophy"]
+9. Заголовок курсів "програмування"
+Xpath://div[@class="course-cat-bar_body"]/p[contains(text(),'Про')]
+10. Заголовк курсів "тестування"
+Xpath: //div[@class="course-cat-bar_body"]/p[contains(text(),'Те')]
+11. Заголовок курсів "менеджмент"
+Xpath://div[@class="course-cat-bar_body"]/p[contains(text(),'Ме')]
+12. Заголовок курсів "маркетинг"
+ Xpath: //div[@class="course-cat-bar_body"]/p[contains(text(),'Ма')]
+13. Заголовок курсів "дизайн
+Xpath: //div[@class="course-cat-bar_body"]/p[contains(text(),'Диз')]
+14. Заголовок курсів "дитячи курси"
+Xpath: //div[@class="course-cat-bar_body"]/p[contains(text(),'Дит')]
+15. Лінк на професії UI/UX
+Xpath: //div[@class="container"]//a[@href = "https://sprint.ithillel.ua/uiux"]
+16. Лінк на професії QA start
+Xpath://div[@class="container"]//a[@href = "https://sprint.ithillel.ua/qa"]
+17. Лінк на професії python start
+Xpath: //div[@class="container"]//a[@href = "https://sprint.ithillel.ua/python"]
+18. Лінк на професії Front end start
+Xpath: //div[@class="container"]//a[@href = "https://sprint.ithillel.ua/front-end"]
+19. Лінк на професії SMM start
+Xpath: //div[@class="container"]//a[@href = "https://sprint.ithillel.ua
+20. Лінк на кнопку працевлаштування
+Xpath: //div[@class="block-employment"]//a[contains(@href,'employment')]
+21.  Кнопка стати викладачем
+Xpath: //button[@data-modal = "become-coach"]
+22.  Лінк на компанію самсунг
+Xpath: //img[@alt="Samsung"]
+23. Лінк на компанію  infopulse
+Xpath: //img[@alt="Infopulse"]
+24. Лінк на компанію Evo
+Xpath: //img[@alt="EVO"]
+25: Лінк на відгуки про школу
+Xpath: //div[@class="block-employment"]//a[contains(@href,'employment')]
+26: Лінк - Як мені визначитись з курсом
+Xpath: //p[contains(text(),'Як мені')]
+27:Лінк - Скільки коштуватимуть курси
+Xpath: //p[contains(text(),'Скільки')]
+28: Лінк на матеріали в блозі
+Xpath: //div[@class="section-header"]//a[@href="https://blog.ithillel.ua"]
+29: Лінк на особистий кабінет
+Xpath: //li[@class="extra-links_item"]/a[contains(text(), 'Осо')]
+30: Лінк на мапу сайта
+Xpath: //li[@class="extra-links_item"]/a[contains(text(), 'Мапа сайту')]
+
+CSS
+*****************************************
+
+Лінк на кнопку працевлаштування:
+CSS: div.block-employment a[href*='employment']
+Кнопка стати викладачем:
+CSS: button[data-modal="become-coach"]
+Лінк на компанію Samsung:
+CSS: img[alt="Samsung"]
+Лінк на компанію Infopulse:
+CSS: img[alt="Infopulse"]
+Лінк на компанію Evo:
+CSS: img[alt="EVO"]
+Лінк на відгуки про школу:
+CSS: div.block-employment a[href*='employment']
+Лінк - Як мені визначитись з курсом:
+CSS: p:contains("Як мені")
+Лінк - Скільки коштуватимуть курси:
+CSS: p:contains("Скільки")
+Лінк на матеріали в блозі:
+CSS: div.section-header a[href='https://blog.ithillel.ua']
+Лінк на особистий кабінет:
+CSS: li.extra-links_item a:contains('Осо')
+Лінк на мапу сайта:
+CSS: li.extra-links_item a:contains('Мапа сайту')
