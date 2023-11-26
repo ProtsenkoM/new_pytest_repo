@@ -6,8 +6,9 @@ pipeline {
 
 
     stages {
-        stage('setup') {
+        stage('Git fetch and setup') {
             steps {
+                git branch: 'main', credentialsId: 'b805d334-4ee9-4bf0-8936-1440b15a8888', url: 'https://github.com/ProtsenkoM/new_pytest_repo.git'
                 sh '''#!/bin/bash
                 apt-get update
                 apt-get install -y python3
