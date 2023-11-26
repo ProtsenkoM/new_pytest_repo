@@ -22,8 +22,8 @@ def pytest_runtest_makereport(item):
 
 def pytest_addoption(parser):
     parser.addoption('--env', action='store', default='dev', help='Choose your env')
-    parser.addoption('--hub', action='store', default='False', help='Run test in container Solenoid')
-    parser.addoption('--headless', action='store', default='False', help='Run test in container Solenoid')
+    parser.addoption('--hub', action='store', default='True', help='Run test in container Solenoid')
+    parser.addoption('--headless', action='store', default='True', help='Run test in container Solenoid')
 
 
 def pytest_configure(config):
