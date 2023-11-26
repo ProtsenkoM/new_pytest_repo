@@ -1,9 +1,13 @@
 from http import HTTPStatus
+
+import pytest
+
 from api_collections.data_classes.user_dataclass import UserData
 from api_collections.post_api import PostApi
 from api_collections.user_api import UserApi
 
 
+@pytest.mark.smoke
 def test_get_users():
     """
     Test get all users
@@ -15,6 +19,7 @@ def test_get_users():
     assert isinstance(data, dict), f'Incorrect type of object come from response'
 
 
+@pytest.mark.smoke
 def test_create_user(get_fake_user_payload):
     """
     Testing creation of new user
@@ -37,7 +42,7 @@ def test_get_user_by_id(get_new_user_id, get_mock_user_by_id):
     assert response.status_code == HTTPStatus.OK, f'Request fail({response.text})'
     user_data = UserData(**response.json())
     actual_data_from_db = get_mock_user_by_id(_id)
-    assert user_data.get_dict() == actual_data_from_db.get_dict(),  f'Different data between db and response'
+    assert user_data.get_dict() == actual_data_from_db.get_dict(), f'Different data between db and response'
 
 
 def test_create_user_without_email():
@@ -61,7 +66,7 @@ def test_update_user_by_id(get_new_user_id, get_mock_user_by_id):
     assert response.status_code == HTTPStatus.OK, f'Request fail({response.text})'
     user_data = UserData(**response.json())
     actual_data_from_db = get_mock_user_by_id(_id)
-    assert user_data.get_dict() == actual_data_from_db.get_dict(),  f'Different data between db and response'
+    assert user_data.get_dict() == actual_data_from_db.get_dict(), f'Different data between db and response'
 
 
 def test_delete_user_by_id(get_new_user_id):
@@ -95,7 +100,7 @@ def test_create_post(get_fake_post_payload):
     response = PostApi().create_new_post(user_data=payload)
     assert response.status_code == HTTPStatus.OK, f'Request fail({response.text})'
     data = response.json()
-    assert data['owner']['id'] == payload['owner'],  f'Owner id has other id after creation'
+    assert data['owner']['id'] == payload['owner'], f'Owner id has other id after creation'
 
 
 def test_get_post_by_id(get_new_post_id, get_mock_post_by_id):
@@ -133,4 +138,3 @@ def test_delete_post_by_id(get_new_post_id):
     response = PostApi().delete_post_by_id(post_id=_id)
     check_obj = PostApi().get_post_by_id(_id)
     assert check_obj.status_code == HTTPStatus.NOT_FOUND, f'Request fail({response.text})'
-
