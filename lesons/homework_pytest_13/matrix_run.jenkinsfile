@@ -1,0 +1,65 @@
+pipeline {
+    agent any
+    parameters {
+        string defaultValue: '-m smoke', description: 'example: -m smoke', name: 'markers'
+    }
+
+
+    stages {
+        stage('Git fetch and setup') {
+            steps {
+                git branch: 'main', credentialsId: 'b805d334-4ee9-4bf0-8936-1440b15a8888', url: 'https://github.com/ProtsenkoM/new_pytest_repo.git'
+                sh '''#!/bin/bash
+                apt-get update
+                apt-get install -y python3
+                apt-get install -y python3-pip
+                apt install -y python3.11-venv
+                python3 -m venv venv
+                source venv/bin/activate
+                python3 -m pip install -r requirements.txt
+                '''
+            }
+        }
+        stage('Matrix stage'){
+            matrix{
+                axes{
+                    axis{
+                        name 'BROWSER'
+                        values '1', '2'
+                    }
+
+                }
+                        stages {
+                            stage('Run unit tests') {
+                        steps {
+                            sh '''#!/bin/bash
+                            source venv/bin/activate
+                            python3 -m pytest -vv $markers tests/unit_tests/functinal_test'''
+                        }
+                    }
+                    stage('Run api tests') {
+                        steps {
+                            sh '''#!/bin/bash
+                            source venv/bin/activate
+                            python3 -m pytest -vv $markers tests/api_tests/'''
+                        }
+                    }
+                    stage('Run ui tests') {
+                        steps {
+                            sh '''#!/bin/bash
+                            source venv/bin/activate
+                            python3 -m pytest -vv $markers --hub True --headless False --browser ${BROWSER} tests/ui_tests'''
+                        }
+                    }
+                }
+            }
+
+        }
+
+        stage('Run allure report') {
+            steps {
+                allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            }
+        }
+    }
+}
