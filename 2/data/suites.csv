@@ -1,17 +1,45 @@
 "Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","sanity test",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","1","tests.unit_tests.functinal_test","test_car","","","","test_type_model[123]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_miles_limit[-123]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_miles_limit[str]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","sanity test",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_miles_limit[invalid_miles3]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_brand[invalid_brand2]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_brand[None]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","sanity test",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","1","tests.unit_tests.functinal_test","test_car","","","","test_type_model[None]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","sanity test",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","1","tests.unit_tests.functinal_test","test_car","","","","test_type_brand[123]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","sanity test",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_model[invalid_model2]",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","sanity test",""
-"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","0","tests.unit_tests.functinal_test","test_car","","","","test_type_miles_limit[None]",""
+"passed","Mon Dec 04 19:15:17 GMT 2023","Mon Dec 04 19:15:18 GMT 2023","741","tests.api_tests","test_api","","","","test_get_posts","
+    Test get all post and check the type
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:15 GMT 2023","Mon Dec 04 19:15:16 GMT 2023","639","tests.api_tests","test_api","","","","test_get_user_by_id","
+    Test getting user by id
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:15 GMT 2023","344","tests.api_tests","test_api","","","","test_create_user","
+    Testing creation of new user
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:17 GMT 2023","Mon Dec 04 19:15:17 GMT 2023","460","tests.api_tests","test_api","","","","test_delete_user_by_id","
+    Test deletion of already created users
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:16 GMT 2023","Mon Dec 04 19:15:17 GMT 2023","422","tests.api_tests","test_api","","","","test_update_user_by_id","
+    Test update of already created users with different parameters
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:20 GMT 2023","Mon Dec 04 19:15:20 GMT 2023","569","tests.api_tests","test_api","","","","test_update_post_by_id","
+    Test update already created post by other data
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:19 GMT 2023","Mon Dec 04 19:15:20 GMT 2023","518","tests.api_tests","test_api","","","","test_get_post_by_id","
+    Test getting post by id
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:21 GMT 2023","Mon Dec 04 19:15:21 GMT 2023","440","tests.api_tests","test_api","","","","test_delete_post_by_id","
+    Test deletion of already created post
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:16 GMT 2023","Mon Dec 04 19:15:16 GMT 2023","379","tests.api_tests","test_api","","","","test_create_user_without_email","
+    Test creation of new user with incorrect parameters
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:14 GMT 2023","Mon Dec 04 19:15:14 GMT 2023","419","tests.api_tests","test_api","","","","test_get_users","
+    Test get all users
+    :rtype: object
+    "
+"passed","Mon Dec 04 19:15:18 GMT 2023","Mon Dec 04 19:15:19 GMT 2023","208","tests.api_tests","test_api","","","","test_create_post","
+    Test creation of new post
+    :rtype: object
+    "
