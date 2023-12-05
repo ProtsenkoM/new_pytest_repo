@@ -39,21 +39,20 @@ jobs:
     - name: Test with pytest
       run: |
         pytest tests/api_tests
-        
 
     - name: Load test report history
       uses: actions/checkout@v3
       if: always()
       continue-on-error: true
       with:
-         ref: gh-pages
-         path: gh-pages
+         ref: gh_pages
+         path: gh_pages
 
     - name: Build test report
       uses: simple-elf/allure-report-action@v1.7
       if: always()
       with:
-        gh_pages: gh-pages
+        gh_pages: gh_pages
         allure_history: allure-history
         allure_results: allure-results
 
@@ -62,5 +61,5 @@ jobs:
       if: always()
       with:
         github_token: ${{secrets.GITHUB_TOKEN}}
-        publish_branch: gh-pages
+        publish_branch: gh_pages
         publish_dir: allure-history
