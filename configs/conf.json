@@ -1,9 +1,0 @@
-{
-  "url": "https://account.bbc.com/",
-  "login": "mishunya4@gmail.com",
-  "password": "M123456!",
-  "browser_id": "1",
-  "db_param": {
-    "path": "/db/book_shop.db"
-  }
-}
