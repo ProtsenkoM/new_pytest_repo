@@ -1,0 +1,45 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Dec 05 09:23:50 GMT 2023","Tue Dec 05 09:23:51 GMT 2023","334","tests.api_tests","test_api","","","","test_get_users","
+    Test get all users
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:53 GMT 2023","Tue Dec 05 09:23:54 GMT 2023","372","tests.api_tests","test_api","","","","test_get_posts","
+    Test get all post and check the type
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:55 GMT 2023","Tue Dec 05 09:23:56 GMT 2023","843","tests.api_tests","test_api","","","","test_get_post_by_id","
+    Test getting post by id
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:56 GMT 2023","Tue Dec 05 09:23:57 GMT 2023","395","tests.api_tests","test_api","","","","test_update_post_by_id","
+    Test update already created post by other data
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:51 GMT 2023","Tue Dec 05 09:23:52 GMT 2023","154","tests.api_tests","test_api","","","","test_create_user_without_email","
+    Test creation of new user with incorrect parameters
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:53 GMT 2023","Tue Dec 05 09:23:53 GMT 2023","507","tests.api_tests","test_api","","","","test_delete_user_by_id","
+    Test deletion of already created users
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:57 GMT 2023","Tue Dec 05 09:23:58 GMT 2023","322","tests.api_tests","test_api","","","","test_delete_post_by_id","
+    Test deletion of already created post
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:54 GMT 2023","Tue Dec 05 09:23:54 GMT 2023","184","tests.api_tests","test_api","","","","test_create_post","
+    Test creation of new post
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:52 GMT 2023","Tue Dec 05 09:23:52 GMT 2023","391","tests.api_tests","test_api","","","","test_update_user_by_id","
+    Test update of already created users with different parameters
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:51 GMT 2023","Tue Dec 05 09:23:51 GMT 2023","352","tests.api_tests","test_api","","","","test_get_user_by_id","
+    Test getting user by id
+    :rtype: object
+    "
+"passed","Tue Dec 05 09:23:51 GMT 2023","Tue Dec 05 09:23:51 GMT 2023","183","tests.api_tests","test_api","","","","test_create_user","
+    Testing creation of new user
+    :rtype: object
+    "
