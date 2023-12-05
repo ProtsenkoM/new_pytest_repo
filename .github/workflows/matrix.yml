@@ -18,8 +18,6 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    outputs:
-      RUNNER: ${{runner.name}}
     strategy:
       matrix:
         test_path: [ "api_tests", "unit_tests" ]
@@ -39,8 +37,7 @@ jobs:
         run: |
           pytest tests/${{matrix.test_path}}
   report:
-    needs: build
-    runs-on: ${{needs.build.outputs.RUNNER}}
+    runs-on: ubuntu-latest
     steps:
       - name: Load test report history
         uses: actions/checkout@v3
