@@ -37,6 +37,7 @@ jobs:
         run: |
           pytest tests/${{matrix.test_path}}
   report:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Load test report history
