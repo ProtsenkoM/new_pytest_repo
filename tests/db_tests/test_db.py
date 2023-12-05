@@ -52,5 +52,5 @@ def test_get_by_fake_id(fake, books_repo):
 def test_del_by_fake_id(books_repo, fake):
     db = books_repo
     count = db.get_count_rows()
-    del_by_id = db.delete_by_id(book_id=random.randint(100,200))
+    del_by_id = db.delete_by_id(book_id=random.randint(100, 200))
     assert count == del_by_id, 'The are no rows were deleted'

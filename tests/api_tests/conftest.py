@@ -53,4 +53,3 @@ def get_mock_post_by_id():
         resp = PostApi().get_post_by_id(post_id=post_id)  # like data from DB
         return UserData(**resp.json())
     return __inner
-
